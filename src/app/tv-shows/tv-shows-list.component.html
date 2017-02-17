@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <button (click)="addShow()" class="btn btn-primary">
+        Add Show
+      </button>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div *ngFor="let tvShow of tvShows" class="col-sm-4 tv-show">
+      <ul class="list-unstyled">
+        <li>
+          <img [src]="tvShow.imgUrl">
+        </li>
+        <li>&nbsp;</li>
+        <li>
+          <strong>Title:</strong> {{tvShow.title}}
+        </li>
+        <li>
+          <strong>Genre:</strong> {{tvShow.genre}}
+        </li>
+        <li>
+          <strong>Rating:</strong> {{tvShow.rating}}
+        </li>
+        <li>&nbsp;</li>
+      </ul>
+    </div>
+  </div>
